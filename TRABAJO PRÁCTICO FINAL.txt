@@ -1,0 +1,92 @@
+TRABAJO PRÁCTICO FINAL - ENTREGA ESCRITA 
+Materia: Pensamiento Computacional - TIC 2025 
+Profesor: Daniel J. Feijó 
+Integrantes: Florencia Santoro, Paulina Alonso, Isabella Mastronardi, Agustina Invierno 
+
+___________________________________
+
+Punto 9
+
+Durante el desarrollo de nuestro programa aplicamos de forma constante los cuatro elementos fundamentales del pensamiento computacional: descomposición, reconocimiento de patrones, abstracción y algoritmos. Estos elementos nos ayudaron a resolver un problema complejo —la simulación de análisis genético con ADN— dividiéndolo en partes más simples, reutilizables y comprensibles. 
+
+
+Descomposición 
+
+Desde el principio dividimos el problema principal en tareas más pequeñas y manejables punto por punto. Por ejemplo: las funciones que creamos.
+
+- crear_identificador() (se encarga solo de generar una cadena similar al ADN original), crear_muestra() (aplica más cambios), comparar_coincidencias() (calcula el porcentaje de igualdad), entre otras.
+
+Gracias a esto, cada parte del programa se pudo desarrollar, entender y corregir por separado, facilitando también el trabajo en grupo. No era necesario tener todo el 
+
+
+Reconocimiento de patrones 
+
+Identificamos patrones constantes a lo largo del código: 
+
+- En el ADN, A va con T y G con C (usado en crear_pares()). 
+
+- Las mutaciones siempre reemplazan letras por otras distintas. 
+
+- Las comparaciones de cadenas se hacen letra por letra. 
+
+Esto nos permitió aplicar la misma lógica en distintas funciones sin reescribir código innecesariamente. 
+
+
+Abstracción 
+
+En lugar de trabajar con secuencias biológicas reales, representamos el ADN como strings de letras. Esta abstracción nos permitió centrarnos en los aspectos lógicos del problema, como: 
+
+- Simular daño ambiental con cambios aleatorios en la cadena. 
+
+- Medir similitud mediante porcentaje de coincidencia. 
+
+- Identificar una especie comparando cadenas. 
+
+
+Algoritmos 
+
+Cada función representa un algoritmo claro y ordenado. Por ejemplo: En reconstruccion_identificador(), se repite una corrección hasta que la muestra coincida con el identificador y en porcentajes_muestras(), se recorren todas las especies y se calcula el porcentaje de coincidencia. 
+
+Gracias a esto, pudimos automatizar el comportamiento del programa sin errores y con lógica clara. 
+
+___________________________________
+
+Punto 10
+
+Durante el desarrollo del programa, implementamos buenas prácticas que mejoraron la claridad, eficiencia y mantenibilidad del código. Estas son las más importantes: 
+
+
+Modularización (Funciones separadas) 
+Dividimos el código en funciones específicas y reutilizables como crear_identificador(), comparar_muestras() o crear_pares(). 
+Esto permitió trabajar por partes, probar funciones aisladas y evitar errores por repeticiones. 
+
+
+Nombres descriptivos 
+Tanto las funciones como las variables tienen nombres que explican claramente su uso, como muestra_corregida, posiciones_a_cambiar o porcentajes_muestras. Esto hace que el código sea fácil de leer para cualquier persona. 
+
+
+Comentarios claros 
+Incluimos comentarios en cada función para explicar su propósito, y dentro del código para aclarar pasos importantes, y que se comprendan los procesos.
+
+
+Uso correcto de estructuras de datos 
+Esto hizo que el código fuera simple, rápido y eficiente. Nosotras elegimos usar: Listas (para modificar cadenas), Diccionarios (para manejar las especies), String o cadenas (para representar el ADN y las muestras)
+
+
+Adaptabilidad a cualquier largo de ADN 
+El uso de len() en todas las funciones nos permitió que el programa funcione con cadenas de cualquier tamaño, sin errores ni restricciones. 
+Ejemplo: for i in range(len(cadena_adn)):
+
+
+Separación entre definición y ejecución 
+Todas las funciones se definen al inicio del programa, y luego, en la parte final, se hace la ejecución principal. Esto mejora la organización general del código. 
+
+
+Presentación clara de resultados 
+Cuidamos que los mensajes en pantalla sean prolijos, con alineación y fórmulas redondeadas. Esto facilita mucho la lectura, sobre todo en resultados como: 
+print(f"MUESTRA {i:2d}: {m}") Aca el código enumeraba e imprimia todas las muestras como si los números de un solo digito tuvieran 2 (:2d)
+
+
+Pruebas completas del programa 
+Antes de la entrega, probamos el código con distintos ejemplos, cadenas largas y cortas, y verificamos que cada parte funcione correctamente conectada con las demás. 
+
